@@ -54,18 +54,14 @@
 </head>
 <body>
   <div class="container">
-    <!-- شعار القرطاجي بـ SVG -->
-    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="90" stroke="#fff" stroke-width="10" fill="none"/>
-      <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-size="40" fill="#fff" font-family="Cairo, sans-serif">القرطاجي</text>
-    </svg>
+    <!-- ✅ هنا شعارك الخاص -->
+    <img src="logo.png" alt="شعار القرطاجي" class="logo" />
 
     <h1>قريباً جداً</h1>
     <p>نحن نعمل بجد لإطلاق موقع القرطاجي الرسمي!</p>
     <div id="countdown"></div>
   </div>
 
-  <!-- ✅ هذا هو وسم الـ JavaScript الصحيح -->
   <script>
     const launchDate = new Date("2025-08-01T00:00:00").getTime();
     const countdown = document.getElementById("countdown");
