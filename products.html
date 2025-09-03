@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منتجاتنا - El Carthagi</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
-
   <header>
-    <h1>منتجاتنا</h1>
+    <h1>El Carthagi</h1>
     <nav>
       <a href="index.html">الرئيسية</a>
-      <a href="products.html">المنتجات</a>
-      <a href="cart.html">سلة المشتريات 🛒</a>
+      <a href="products.html" class="active">المنتجات</a>
+      <a href="cart.html">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
     </nav>
   </header>
 
-  <section class="products">
-    <div class="product">
-      <img src="images/product1.jpg" alt="منتج 1">
-      <h3>قميص Carthagi</h3>
-      <p>سعر: 50 TND</p>
-      <button onclick="addToCart('قميص Carthagi', 50)">أضف إلى السلة</button>
-    </div>
+  <section class="products-section">
+    <h2>منتجاتنا المميزة</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://placehold.co/300x300/e67e22/ffffff?text=قميص" alt="قميص Carthagi">
+        <h3>قميص Carthagi</h3>
+        <p>سعر: 50 TND</p>
+        <button onclick="addToCart('قميص Carthagi', 50)">أضف إلى السلة</button>
+      </div>
 
-    <div class="product">
-      <img src="images/product2.jpg" alt="منتج 2">
-      <h3>قبعة Carthagi</h3>
-      <p>سعر: 30 TND</p>
-      <button onclick="addToCart('قبعة Carthagi', 30)">أضف إلى السلة</button>
+      <div class="product">
+        <img src="https://placehold.co/300x300/3498db/ffffff?text=قبعة" alt="قبعة Carthagi">
+        <h3>قبعة Carthagi</h3>
+        <p>سعر: 30 TND</p>
+        <button onclick="addToCart('قبعة Carthagi', 30)">أضف إلى السلة</button>
+      </div>
+
+      <div class="product">
+        <img src="https://placehold.co/300x300/2ecc71/ffffff?text=شنطة" alt="شنطة Carthagi">
+        <h3>شنطة Carthagi</h3>
+        <p>سعر: 80 TND</p>
+        <button onclick="addToCart('شنطة Carthagi', 80)">أضف إلى السلة</button>
+      </div>
+
+      <div class="product">
+        <img src="https://placehold.co/300x300/9b59b6/ffffff?text=ساعة" alt="ساعة Carthagi">
+        <h3>ساعة Carthagi</h3>
+        <p>سعر: 120 TND</p>
+        <button onclick="addToCart('ساعة Carthagi', 120)">أضف إلى السلة</button>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 El Carthagi</p>
+    <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
