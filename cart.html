@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سلة المشتريات - El Carthagi</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
-
   <header>
     <h1>سلة المشتريات</h1>
     <nav>
       <a href="index.html">الرئيسية</a>
       <a href="products.html">المنتجات</a>
-      <a href="cart.html">سلة المشتريات 🛒</a>
+      <a href="cart.html" class="active">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
     </nav>
   </header>
 
-  <section class="cart">
-    <h2>محتويات السلة</h2>
-    <ul id="cart-items"></ul>
-    <p id="total"></p>
-    <a href="https://wa.me/216XXXXXXXX" target="_blank" class="btn">إتمام الطلب عبر WhatsApp</a>
+  <section class="cart-container">
+    <div class="cart">
+      <h2>محتويات السلة</h2>
+      <ul id="cart-items"></ul>
+      <p id="total" style="display: none;">المجموع: 0 TND</p>
+      <div id="empty-cart" class="empty-cart">سلة التسوق فارغة</div>
+      <a href="#" id="checkout-btn" class="btn" style="display: none; margin-top: 20px;">إتمام الطلب عبر WhatsApp</a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 El Carthagi</p>
+    <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
