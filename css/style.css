@@ -113,91 +113,85 @@ nav a:hover::after {
    واجهة Hero
 ========================= */
 .hero {
-  padding: 120px 20px 80px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/3c3c3c/ffffff?text=El+Carthagi') no-repeat center center/cover;
-  color: var(--light);
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/3c3c3c/ffffff?text=El+Carthagi') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
   text-align: center;
-  animation: fadeIn 1.2s ease-out;
-}
-
-.hero h2 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  animation: slideUp 1s ease-out;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
-  animation: slideUp 1.3s ease-out;
+h1 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+p {
+  font-size: 1.8rem;
+  color: #eee;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
 
 /* =========================
    الميزات
 ========================= */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.feature-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  text-align: center;
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-.feature-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+(rgin-bottom: 15px;
   color: var(--dark);
 }
 
-.feature-card p {
-  color: #666;
-  font-size: 1.1rem;
 }
 
 /* =========================
    الأزرار
 ========================= */
 .btn {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 14px 35px;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  padding: 15px 40px;
   border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
   position: relative;
   overflow: hidden;
-  z-index: 1;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--secondary);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateX(5px);
+}
+
+.btn:hover::before {
+  transform: translateX(0);
 }
 
 .btn:active {
@@ -248,29 +242,29 @@ nav a:hover::after {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
+  gap: 25px;
+  padding: 50px;
 }
 
 .product {
   background: white;
   padding: 25px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
   text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 .product img {
-  max-width: 100%;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  transition: var(--transition);
-  height: 220px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
+
+.add-to-cart-btn {
+  background: linear-gradient(90deg, #e
 
 .product h3 {
   font-size: 1.5rem;
