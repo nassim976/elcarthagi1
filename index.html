@@ -1,88 +1,31 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>القرطاجي | قريباً</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      direction: rtl;
-      font-family: 'Cairo', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #00203F, #ADEFD1);
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 600px;
-    }
-
-    .logo {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    #countdown {
-      font-size: 2rem;
-      background: rgba(0,0,0,0.2);
-      padding: 15px 30px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Carthagi - متجر إلكتروني</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- ✅ هنا شعارك الخاص -->
-    <img src="logo.png" alt="شعار القرطاجي" class="logo" />
 
-    <h1>قريباً جداً</h1>
-    <p>نحن نعمل بجد لإطلاق موقع القرطاجي الرسمي!</p>
-    <div id="countdown"></div>
-  </div>
+  <header>
+    <h1>El Carthagi</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="cart.html">سلة المشتريات 🛒</a>
+    </nav>
+  </header>
 
-  <script>
-    const launchDate = new Date("2025-08-01T00:00:00").getTime();
-    const countdown = document.getElementById("countdown");
+  <section class="hero">
+    <h2>مرحبا بكم في متجر El Carthagi</h2>
+    <p>تسوق منتجاتنا المميزة بكل سهولة وأمان.</p>
+    <a href="products.html" class="btn">تسوق الآن</a>
+  </section>
 
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
+  <footer>
+    <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
+  </footer>
 
-      if (distance < 0) {
-        clearInterval(interval);
-        countdown.innerHTML = "لقد انطلقنا!";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days} يوم ${hours} ساعة ${minutes} دقيقة ${seconds} ثانية`;
-    }, 1000);
-  </script>
 </body>
 </html>
