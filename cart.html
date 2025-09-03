@@ -8,27 +8,124 @@
 </head>
 <body>
   <header>
-    <h1>سلة المشتريات</h1>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="products.html">المنتجات</a>
-      <a href="cart.html" class="active">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
-    </nav>
+    <div class="header-container">
+      <a href="index.html" class="logo">El Carthagi</a>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html" class="active">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
   </header>
 
+  <section class="checkout-progress">
+    <div class="progress-step active">
+      <div class="step-number">1</div>
+      <div class="step-label">السلة</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="progress-step">
+      <div class="step-number">2</div>
+      <div class="step-label">الدفع</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="progress-step">
+      <div class="step-number">3</div>
+      <div class="step-label">التأكيد</div>
+    </div>
+  </section>
+
   <section class="cart-container">
-    <div class="cart">
-      <h2>محتويات السلة</h2>
-      <ul id="cart-items"></ul>
-      <p id="total" style="display: none;">المجموع: 0 TND</p>
-      <div id="empty-cart" class="empty-cart">سلة التسوق فارغة</div>
-      <a href="#" id="checkout-btn" class="btn" style="display: none; margin-top: 20px;">إتمام الطلب عبر WhatsApp</a>
+    <div class="cart-header">
+      <h1>سلة التسوق</h1>
+      <p>يمكنك تعديل كمية المنتجات أو إزالتها قبل إكمال الطلب</p>
+    </div>
+    
+    <div class="cart-content">
+      <div class="cart-items-container">
+        <div id="cart-items">
+          <!-- سيتم إضافة العناصر ديناميكياً هنا -->
+        </div>
+        
+        <div id="empty-cart" class="empty-cart">
+          <img src="https://placehold.co/150x150/e67e22/ffffff?text=🛒" alt="سلة فارغة">
+          <h3>سلة التسوق فارغة</h3>
+          <p>لم تقم بإضافة أي منتجات بعد</p>
+          <a href="products.html" class="btn">تسوق الآن</a>
+        </div>
+      </div>
+      
+      <div class="order-summary">
+        <h2>ملخص الطلب</h2>
+        <div class="summary-item">
+          <span>المجموع الفرعي:</span>
+          <span id="subtotal">0 TND</span>
+        </div>
+        <div class="summary-item">
+          <span>رسوم التوصيل:</span>
+          <span id="shipping">5 TND</span>
+        </div>
+        <div class="summary-divider"></div>
+        <div class="summary-item total">
+          <span>المجموع الكلي:</span>
+          <span id="total">0 TND</span>
+        </div>
+        
+        <div class="promo-code">
+          <input type="text" placeholder="أدخل كود الخصم">
+          <button class="btn-apply">تطبيق</button>
+        </div>
+        
+        <a href="#" id="checkout-btn" class="btn checkout-btn">إتمام الطلب عبر WhatsApp</a>
+        
+        <div class="guarantee">
+          <img src="https://placehold.co/24x24/2ecc71/ffffff?text=✓" alt="ضمان">
+          <p>دفع آمن | توصيل خلال 24-48 ساعة | إرجاع خلال 14 يوم</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="you-might-like">
+    <h2>قد يعجبك أيضاً</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://placehold.co/300x300/e67e22/ffffff?text=قميص" alt="قميص Carthagi">
+        <h3>قميص Carthagi</h3>
+        <p class="price">50 TND</p>
+        <button class="add-to-cart-btn" data-name="قميص Carthagi" data-price="50">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/300x300/3498db/ffffff?text=قبعة" alt="قبعة Carthagi">
+        <h3>قبعة Carthagi</h3>
+        <p class="price">30 TND</p>
+        <button class="add-to-cart-btn" data-name="قبعة Carthagi" data-price="30">أضف إلى السلة</button>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
+    <div class="footer-content">
+      <div class="footer-logo">El Carthagi</div>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">سلة المشتريات</a>
+        <a href="#">من نحن</a>
+        <a href="#">اتصل بنا</a>
+      </div>
+      <div class="social-links">
+        <a href="#"><img src="https://placehold.co/30x30/3b5998/ffffff?text=f" alt="Facebook"></a>
+        <a href="#"><img src="https://placehold.co/30x30/e4405f/ffffff?text=i" alt="Instagram"></a>
+        <a href="#"><img src="https://placehold.co/30x30/25D366/ffffff?text=w" alt="WhatsApp"></a>
+      </div>
+      <p class="copyright">© 2025 El Carthagi - جميع الحقوق محفوظة</p>
+    </div>
   </footer>
+
+  <div class="cart-update-notification" style="display: none;">
+    <p>تم تحديث السلة بنجاح!</p>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
