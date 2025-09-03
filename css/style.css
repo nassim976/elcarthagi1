@@ -507,5 +507,56 @@ footer::before {
     width: 100%;
     padding: 14px;
   }
+  .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f39c12;
+  transform: translateY(-2px);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 }
 ```
