@@ -8,50 +8,201 @@
 </head>
 <body>
   <header>
-    <h1>El Carthagi</h1>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="products.html" class="active">المنتجات</a>
-      <a href="cart.html">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
-    </nav>
+    <div class="header-container">
+      <a href="index.html" class="logo">El Carthagi</a>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html" class="active">المنتجات</a>
+        <a href="cart.html">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="products-section">
-    <h2>منتجاتنا المميزة</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://placehold.co/300x300/e67e22/ffffff?text=قميص" alt="قميص Carthagi">
-        <h3>قميص Carthagi</h3>
-        <p>سعر: 50 TND</p>
-        <button onclick="addToCart('قميص Carthagi', 50)">أضف إلى السلة</button>
-      </div>
-
-      <div class="product">
-        <img src="https://placehold.co/300x300/3498db/ffffff?text=قبعة" alt="قبعة Carthagi">
-        <h3>قبعة Carthagi</h3>
-        <p>سعر: 30 TND</p>
-        <button onclick="addToCart('قبعة Carthagi', 30)">أضف إلى السلة</button>
-      </div>
-
-      <div class="product">
-        <img src="https://placehold.co/300x300/2ecc71/ffffff?text=شنطة" alt="شنطة Carthagi">
-        <h3>شنطة Carthagi</h3>
-        <p>سعر: 80 TND</p>
-        <button onclick="addToCart('شنطة Carthagi', 80)">أضف إلى السلة</button>
-      </div>
-
-      <div class="product">
-        <img src="https://placehold.co/300x300/9b59b6/ffffff?text=ساعة" alt="ساعة Carthagi">
-        <h3>ساعة Carthagi</h3>
-        <p>سعر: 120 TND</p>
-        <button onclick="addToCart('ساعة Carthagi', 120)">أضف إلى السلة</button>
+  <section class="products-hero">
+    <div class="hero-content">
+      <h1>اكتشف منتجاتنا المميزة</h1>
+      <p>نقدم لك أفضل المنتجات بجودة عالية وأسعار تنافسية</p>
+      
+      <div class="products-filters">
+        <div class="search-box">
+          <input type="text" placeholder="ابحث عن منتج...">
+          <button class="btn-search">بحث</button>
+        </div>
+        
+        <div class="filter-options">
+          <select class="category-filter">
+            <option value="all">جميع الفئات</option>
+            <option value="clothing">ملابس</option>
+            <option value="accessories">إكسسوارات</option>
+            <option value="bags">حقائب</option>
+          </select>
+          
+          <select class="sort-filter">
+            <option value="featured">الأكثر رواجاً</option>
+            <option value="price-low">الأقل سعراً</option>
+            <option value="price-high">الأعلى سعراً</option>
+            <option value="newest">الأحدث</option>
+          </select>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="products-section">
+    <div class="section-header">
+      <h2>منتجاتنا المميزة</h2>
+      <div class="view-options">
+        <button class="view-grid active"><img src="https://placehold.co/20x20/e67e22/ffffff?text=□" alt="Grid View"></button>
+        <button class="view-list"><img src="https://placehold.co/20x20/95a5a6/ffffff?text=☰" alt="List View"></button>
+      </div>
+    </div>
+    
+    <div class="products-container">
+      <div class="products">
+        <div class="product">
+          <div class="product-badge">جديد</div>
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/e67e22/ffffff?text=قميص" alt="قميص Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★★☆</div>
+            <h3>قميص Carthagi</h3>
+            <p class="price">50 TND</p>
+            <button class="add-to-cart-btn" data-name="قميص Carthagi" data-price="50">أضف إلى السلة</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-badge hot">الأكثر مبيعاً</div>
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/3498db/ffffff?text=قبعة" alt="قبعة Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★★★</div>
+            <h3>قبعة Carthagi</h3>
+            <p class="price">30 TND</p>
+            <button class="add-to-cart-btn" data-name="قبعة Carthagi" data-price="30">أضف إلى السلة</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/2ecc71/ffffff?text=شنطة" alt="شنطة Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★☆☆</div>
+            <h3>شنطة Carthagi</h3>
+            <p class="price">80 TND</p>
+            <button class="add-to-cart-btn" data-name="شنطة Carthagi" data-price="80">أضف إلى السلة</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="product-badge sale">تخفيض 20%</div>
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/9b59b6/ffffff?text=ساعة" alt="ساعة Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★★☆</div>
+            <h3>ساعة Carthagi</h3>
+            <p class="price">
+              <span class="original-price">150 TND</span>
+              <span class="discounted-price">120 TND</span>
+            </p>
+            <button class="add-to-cart-btn" data-name="ساعة Carthagi" data-price="120">أضف إلى السلة</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/e74c3c/ffffff?text=حذاء" alt="حذاء Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★★★</div>
+            <h3>حذاء Carthagi</h3>
+            <p class="price">100 TND</p>
+            <button class="add-to-cart-btn" data-name="حذاء Carthagi" data-price="100">أضف إلى السلة</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <div class="product-image">
+            <img src="https://placehold.co/300x300/1abc9c/ffffff?text=نظارة" alt="نظارة Carthagi">
+            <div class="product-overlay">
+              <button class="quick-view">عرض سريع</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">★★★☆☆</div>
+            <h3>نظارة Carthagi</h3>
+            <p class="price">45 TND</p>
+            <button class="add-to-cart-btn" data-name="نظارة Carthagi" data-price="45">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination">
+      <button class="page-btn active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">التالي →</button>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
+    <div class="footer-content">
+      <div class="footer-logo">El Carthagi</div>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="cart.html">سلة المشتريات</a>
+        <a href="#">من نحن</a>
+        <a href="#">اتصل بنا</a>
+      </div>
+      <div class="social-links">
+        <a href="#"><img src="https://placehold.co/30x30/3b5998/ffffff?text=f" alt="Facebook"></a>
+        <a href="#"><img src="https://placehold.co/30x30/e4405f/ffffff?text=i" alt="Instagram"></a>
+        <a href="#"><img src="https://placehold.co/30x30/25D366/ffffff?text=w" alt="WhatsApp"></a>
+      </div>
+      <p class="copyright">© 2025 El Carthagi - جميع الحقوق محفوظة</p>
+    </div>
   </footer>
+
+  <div class="quick-view-modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-product">
+        <div class="modal-product-image">
+          <img src="" alt="Product">
+        </div>
+        <div class="modal-product-info">
+          <h2></h2>
+          <div class="modal-product-rating">★★★★☆</div>
+          <p class="modal-price"></p>
+          <p class="modal-description">هذا وصف مفصل للمنتج سيظهر هنا. يمكنك إضافة معلومات عن المواصفات والتفاصيل الفنية للمنتج.</p>
+          <div class="modal-actions">
+            <button class="add-to-cart-btn" style="width: 100%;">أضف إلى السلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
