@@ -128,4 +128,18 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // تحديث عرض السلة عند تحميل الصفحة
   updateCartDisplay();
+  // في ملف script.js
+document.querySelectorAll('.feature-card, .product').forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = 'translateY(50px)';
+});
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.feature-card, .product').forEach(el => {
+    setTimeout(() => {
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+    }, 300);
+  });
+});
 });
