@@ -214,4 +214,115 @@ footer {
     width: 100%;
     padding: 14px;
   }
+  header.scrolled {
+  background: rgba(17, 17, 17, 0.95);
+  padding: 10px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
+}
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero h2 {
+  animation: slideUp 1s ease-out;
+}
+
+.hero p {
+  animation: slideUp 1.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.product img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+button, .btn {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after, .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+button:active::after, .btn:active::after {
+  width: 300px;
+  height: 300px;
+}
+.product {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.product.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e67e22, transparent);
+  transform: translateX(-50%);
+  animation: glow 3s infinite linear;
+}
+
+@keyframes glow {
+  from { opacity: 0; }
+  50% { opacity: 1; }
+  to { opacity: 0; }
+}
+body {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+:root {
+  --primary: #e67e22;
+  --secondary: #d35400;
+  --dark: #111;
+  --light: #f9f9f9;
+}
 }
