@@ -1,57 +1,217 @@
+/* =========================
+   القواعد العامة
+========================= */
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: "Tahoma", sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
-  background: #f9f9f9;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* =========================
+   الهيدر & النافبار
+========================= */
 header {
-  background: #222;
+  background: linear-gradient(90deg, #111, #333);
   color: #fff;
-  padding: 15px;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+  color: #f9f9f9;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #e67e22;
+}
+
+/* =========================
+   واجهة Hero
+========================= */
 .hero {
-  padding: 50px;
+  padding: 100px 20px;
   background: url('../images/banner.jpg') no-repeat center center/cover;
-  color: white;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-.products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
-.product {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  width: 200px;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
+/* =========================
+   الأزرار
+========================= */
 button, .btn {
   display: inline-block;
   background: #e67e22;
   color: white;
-  padding: 10px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 10px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-footer {
-  background: #222;
-  color: white;
+button:hover, .btn:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+/* =========================
+   المنتجات
+========================= */
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px;
+}
+
+.product {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   السلة
+========================= */
+.cart {
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart h2 {
+  margin-bottom: 20px;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
   padding: 10px;
-  margin-top: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+#total {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* =========================
+   الفوتر
+========================= */
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  button, .btn {
+    width: 100%;
+    padding: 14px;
+  }
 }
