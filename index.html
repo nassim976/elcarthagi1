@@ -1,5 +1,5 @@
- <!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,40 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header>
     <h1>El Carthagi</h1>
     <nav>
-      <a href="index.html">الرئيسية</a>
+      <a href="index.html" class="active">الرئيسية</a>
       <a href="products.html">المنتجات</a>
-      <a href="cart.html">سلة المشتريات 🛒</a>
+      <a href="cart.html">سلة المشتريات 🛒 (<span id="cart-count">0</span>)</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>مرحبا بكم في متجر El Carthagi</h2>
-    <p>تسوق منتجاتنا المميزة بكل سهولة وأمان.</p>
+    <h2>مرحباً بكم في متجر El Carthagi</h2>
+    <p>تسوق منتجاتنا المميزة بكل سهولة وأمان مع توصيل سريع لجميع أنحاء تونس</p>
     <a href="products.html" class="btn">تسوق الآن</a>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>توصيل سريع</h3>
+      <p>توصيل خلال 24-48 ساعة لجميع أنحاء تونس</p>
+    </div>
+    <div class="feature-card">
+      <h3>دفع آمن</h3>
+      <p>طرق دفع متعددة وآمنة تناسب جميع احتياجاتك</p>
+    </div>
+    <div class="feature-card">
+      <h3>دعم فوري</h3>
+      <p>فريق دعم متاح 24/7 لمساعدتك في أي وقت</p>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 El Carthagi - جميع الحقوق محفوظة</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
