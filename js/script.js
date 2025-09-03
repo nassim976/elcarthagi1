@@ -29,3 +29,17 @@ function loadCart() {
 }
 
 window.onload = loadCart;
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+const products = document.querySelectorAll(".product");
+
+window.addEventListener("scroll", () => {
+  products.forEach(product => {
+    const rect = product.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      product.classList.add("show");
+    }
+  });
+});
